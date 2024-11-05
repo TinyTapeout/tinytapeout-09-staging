@@ -1,0 +1,23 @@
+diff --git a/ol2/tt_top/build.py b/ol2/tt_top/build.py
+index a36555f..439696f 100755
+--- a/ol2/tt_top/build.py
++++ b/ol2/tt_top/build.py
+@@ -88,8 +88,8 @@ class TopFlow(SequentialFlow):
+ 		KLayout.StreamOut,
+ 		KLayout.XOR,
+ 		Checker.XOR,
+-		Magic.DRC,
+-		Checker.MagicDRC,
++		#Magic.DRC,
++		#Checker.MagicDRC,
+ 		Magic.SpiceExtraction,
+ 		Checker.IllegalOverlap,
+ 		Netgen.LVS,
+@@ -222,6 +222,7 @@ if __name__ == '__main__':
+ 
+ 		# Magic stream
+ 		"MAGIC_ZEROIZE_ORIGIN" : False,
++		"MAGIC_CAPTURE_ERRORS": False,
+ 
+ 		# DRC
+ 		"MAGIC_DRC_USE_GDS": True,

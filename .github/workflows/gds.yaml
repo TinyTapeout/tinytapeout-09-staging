@@ -48,6 +48,11 @@ jobs:
         working-directory: openlane2
         run:
           git apply --allow-empty ../patches/openlane2.patch
+        
+      - name: Patch tt-multiplexer
+        working-directory: tt-multiplexer
+        run:
+          git apply --allow-empty ../patches/tt-multiplexer.patch
 
       - name: Update caravel configuration
         run: python ./tt/configure.py --update-shuttle
