@@ -18,7 +18,7 @@ jobs:
       PDK_ROOT: ${{ github.workspace }}/pdk
       TT_CONFIG: sky130.yaml
       # Uncomment the following line to build only the specified projects:
-      #TT_ONLY_PROJECTS: tt_um_chip_rom,tt_um_factory_test
+      TT_ONLY_PROJECTS: tt_um_chip_rom,tt_um_factory_test,tt_um_kmakise_sram
 
     runs-on: ubuntu-24.04
     steps:
